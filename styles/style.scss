@@ -16,12 +16,7 @@
     height:  10vh;
     align-items: center;
     border-radius: 5px;
-    .logo{
-        border-radius: 50%;
-        width: 75px;
-        height: 75px;
-        background-color: #ffffff;
-    }
+
     .header-links{
         display: flex;
         justify-content: space-around;
@@ -29,7 +24,12 @@
         color: #ffffff;
     }
 }
-
+.logo{
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    background-color: #ffffff;
+}
 .article{
     display: flex;
     flex-direction: column;
@@ -38,5 +38,45 @@
     text-align: center;
     h3{
         text-align: center;
+    }
+    .articleButtons{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        a{
+            margin: 5px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    .footerLinks{
+        list-style: none;
+        li{
+            display: inline-block;
+            margin: 5px;
+        }
+    }
+}
+
+.comment{
+    display: flex;
+    .profileImg{
+        border-radius: 50%;
+        flex-grow: 1;
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top center;
+    }
+    .commentBody {
+        flex-shrink: 1;
+        width: calc(100% - 100px);
     }
 }
