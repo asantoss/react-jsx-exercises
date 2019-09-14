@@ -1,0 +1,13 @@
+.square {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 100%;
+  margin: 10px;
+}
+
+.row {
+  width: 200px;
+  height: 200px;
+}
+/*# sourceMappingURL=styles.css.map */
