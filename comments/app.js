@@ -1,17 +1,45 @@
-let ProfilePic = () => {
-    return <span>Make this component render an image</span>
+
+const comment = {
+    imgUrl: './image.jpeg',
+    userName: 'Alexander Santos',
+    body: 'Wow this is a great article'
 }
 
-let CommentBody = () => {
-    return <span>Make this component render a username in bold above the comment text</span>
+
+let ProfilePic = (props) => {
+    const { imgUrl } = props;
+    return (
+        <div className="profileImg">
+            <img src={imgUrl} alt="" srcSet="" />
+        </div>
+    )
 }
 
-let Comment = () => {
-    return <span>Make each comment render a profile picture and the comment body</span>
+let CommentBody = (props) => {
+    const { userName, body } = props
+    return (<div className="commentBody">
+        <h3>{userName}</h3>
+        <p>{body}</p>
+    </div>)
 }
 
-let Comments = () => {
-    return <span>Make this component render a list of comments</span>
+let Comment = (props) => {
+    const { imgUrl, userName, body } = props
+    return <div className="comment">
+        <ProfilePic imgUrl={imgUrl} />
+        <CommentBody userName={userName} body={body} />
+    </div>
 }
 
-ReactDOM.render(<Comments />, document.getElementById('root'))
+let Comments = (props) => {
+    const { comments } = props
+    return <div className="commentsContainer">
+        {comments.map((comment, i) => {
+            return (
+                <Comment imgUrl={comment.imgUrl} userName={comment.userName} body={comment.body} key={i} />
+            )
+        })}
+    </div>
+}
+
+// ReactDOM.render(<Comments comments={[comment]} />, document.getElementById('root'))

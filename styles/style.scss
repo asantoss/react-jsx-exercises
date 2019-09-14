@@ -1,0 +1,42 @@
+.square {
+    flex-grow: 1;
+    height: 100%;
+    margin: 10px;
+}
+.row{
+    width: 200px;
+    height: 200px;
+}
+
+.header{
+    display: flex;
+    background-color: #444444;
+    justify-content: space-between;
+    padding: 5px;
+    height:  10vh;
+    align-items: center;
+    border-radius: 5px;
+    .logo{
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        background-color: #ffffff;
+    }
+    .header-links{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        color: #ffffff;
+    }
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    h3{
+        text-align: center;
+    }
+}
